@@ -1,0 +1,35 @@
+maestrias são profissões que podem possuir niveis diferentes, atribuindo melhorias em atributos e habilidades, assim como penalidades.
+maestrias podem ser prerequisito de outras maestrias.
+maestrias podem ser adiquiridas por encontros oportunos ou participação em clãs.
+
+
+recruta
+    soldado
+        cavaleiro
+        atirador
+        arqueiro
+        lanceiro
+        medico
+
+caçador
+guardião
+domador
+curandeiro
+comerciante
+ferreito
+artesão
+herbalista
+mercenario
+lutador
+trombadinha
+ladrão
+caçador de tesouros
+
+acolito
+    estudante
+        mago
+        alquimista
+        mestre de marionetes
+        ilusionista
+        necromante
+
