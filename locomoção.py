@@ -1,12 +1,26 @@
-#a locomoção envolve possibilidade de ordem pratica, ordem politica, e progresso de campanha
-#a locomoção pode vir a influenciar o tempo, onde se locomover de uma cidade a outra pode levar uma fração de dia ou dias
-#uma dia é fracionado em 12 períodos
+#A locomoção envolve possibilidade de ordem pratica, ordem politica, e progresso 
+#de campanha.
+#A locomoção pode vir a influenciar o tempo, onde se locomover de uma cidade a 
+#outra pode levar uma fração de dia ou dias.
+
+#um dia é fracionado em 12 períodos
 #	3 para noite
 #	3 para madrugada
 #	3 para dia
 #	3 para tarde
 
-#qualquer localidade respeita uma estrutura básica de dicionario, onde a chave é seguida por acessos possíveis no momento.
+#Qualquer localidade é representada por um dicionario.
+#A chave é uma string representando um local especifico. O valor correspondente
+#é uma tupla ou lista com strings representando os acessos possiveis.
+
+#Ex:
+# casa = {'sala1' : ['sala2'],
+#         'sala2' : ['sala1', 'sala3']}
+
+#No exemplo acima se tem passagem da 'sala1' para 'sala2'.
+#Passagem da 'sala2' para 'sala1' ou 'sala3'.
+#A 'sala3' não tem o conjunto de chave e valor, logo se o jogar passar da 'sala2'
+#para 'sala3' ficara trancado sem poder progredir no game.
 
 mansao = {
 	'hall de entrada' : ('hall superior', 'salão de festas', 'sala de visitas'),
@@ -16,12 +30,12 @@ mansao = {
 	'quarto 1' : ('hall superior',),
 	'quarto 2' : ('hall superior',),
 	'quarto 3' : ('hall superior',),
-	'cozinha' : ('salão de festas', 'sala de visitas')
+	'cozinha' : ('salão de festas', 'sala de visitas'),
 }
 
 
-#localidade é um dicionario de chave:acesso para
-#sala é a chave que define o ponto de entrada inicial na localidade
+#localidade é um dicionario de chave:acesso a
+#sala é uma string que define a localização atual na localidade
 def explorar(localidade, sala):
     while 1:
         print(f'\nvoce esta aqui > {sala}')
