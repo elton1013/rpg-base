@@ -1,4 +1,4 @@
-#comandos perminte acesso a menus e ações no geral
+#comandos permitem acesso a menus e ações no geral
 
 def invalido(*args, **kwargs):
     input('Comando ou opções invalidas.\nTecle ENTER...')
